@@ -7,9 +7,6 @@ define([
 ) {
     'use strict';
 
-    const GRAPH = 'Graph',
-        DATA = 'data';
-
     function PlotlyGraphControl(options) {
 
         this._logger = options.logger.fork('Control');
@@ -20,8 +17,8 @@ define([
         this._widget = options.widget;
 
         this._embedded = options.embedded;
-        this._activeNodeMetaName = options.activeNodeMetaName || GRAPH;
-        this._plotlyDataAttribute = options.plotlyDataAttribute || DATA;
+        this._activeNodeMetaName = options.activeNodeMetaName;
+        this._plotlyDataAttribute = options.plotlyDataAttribute;
         this._currentNodeId = null;
         this._currentNodeParentId = undefined;
         this._logger.debug('ctor finished');
