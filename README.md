@@ -17,13 +17,14 @@ Checkout the following [seed](./src/seeds/testProject.webgmex), load it as a pro
  
 ![sample-image](./images/sample.png)
  
+### Customization
 To use it in your own visualizer to visualize plotly JSON from your project nodes, use the following customization
  panel parameters. 
 ```
-parmas = {
+params = {
     activeNodeMetaName: The active node meta name for PlotlyGraph panel to be applied
     plotlyDataAttribute: The active node attribute which stores plotly JSON
-    embedded: Whether or not the visualizer is embedded
+    embedded: If true, the visualizer will expect a parent visualizer to call "selectedObjectChanged". If false, it will subscribe to WebGME events.
 }
 ```
  
