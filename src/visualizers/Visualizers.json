@@ -1,8 +1,1 @@
-[
-  {
-    "id": "PlotlyGraph",
-    "title": "PlotlyGraph",
-    "panel": "panels/PlotlyGraph/PlotlyGraphPanel",
-    "DEBUG_ONLY": false
-  }
-]
+[]

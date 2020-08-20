@@ -1,16 +1,4 @@
 {
-  "components": {
-    "visualizers": {
-      "PlotlyGraph": {
-        "src": "panels/PlotlyGraph/PlotlyGraphPanel",
-        "title": "PlotlyGraph",
-        "panel": "src/visualizers/panels/PlotlyGraph",
-        "secondary": false,
-        "widget": "src/visualizers/widgets/PlotlyGraph"
-      }
-    }
-  },
-  "dependencies": {
-    "visualizers": {}
-  }
+  "components": {},
+  "dependencies": {}
 }
