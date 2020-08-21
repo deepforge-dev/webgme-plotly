@@ -1,23 +1,32 @@
 # webgme-plotly
-## Installation
-First, install the webgme-plotly following:
-- [NodeJS](https://nodejs.org/en/) (LTS recommended)
-- [MongoDB](https://www.mongodb.com/)
+This repository contains components for visualizing [plotly](https://plotly.com/javascript/) JSON in [webgme
+](https://github.com/webgme/webgme). 
+## Quick start
+Use [webgme-cli](https://github.com/webgme/webgme-cli) to import `PlotlyGraph` panel to your webgme app:
 
-Second, start mongodb locally by running the `mongod` executable in your mongodb installation (you may need to create a `data` directory or set `--dbpath`).
+```sh
+$ webgme import viz PlotlyGraph webgme-plotly
+``` 
 
-Then, run `webgme start` from the project root to start . Finally, navigate to `http://localhost:8888` to start using webgme-plotly-viz!
+After import, `PlotlyGraph` will be available as a visualizer in your project. An example can be found
+ in [deepforge](https://github.com/deepforge-dev/deepforge).
 
-## Plotly Visualizer For webgme
-This repository contains implementations for visualizing [plotly](https://plotly.com/javascript/) JSON in webgme. 
+## Examples
+This repository is a functioning example of the `PlotlyGraph`. First, make sure you have an instance of mongo
+ running locally. Then, simply clone this repository and run it.
 
-### Usage
-Checkout the following [seed](./src/seeds/testProject.webgmex), load it as a project and select `PlotlyGraph` panel
- for the sampleGraph node as shown in the figure below
+```sh
+git clone https://github.com/deepforge-dev/webgme-plotly.git
+cd webgme-plotly
+npm install
+npm start
+```
+Then, navigate to `http://localhost:8888`, select the following [seed](./src/seeds/testProject.webgmex), load it as a
+ project and select `PlotlyGraph` panel for the sampleGraph node as shown in the figure below: 
  
 ![sample-image](./images/sample.png)
  
-### Customization
+## Customization
 To use it in your own visualizer to visualize plotly JSON from your project nodes, use the following customization
  panel parameters. 
 ```
