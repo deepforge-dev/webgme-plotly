@@ -22,7 +22,6 @@ To use it in your own visualizer to visualize plotly JSON from your project node
  panel parameters. 
 ```
 params = {
-    activeNodeMetaName: The active node meta name for PlotlyGraph panel to be applied
     plotlyDataAttribute: The active node attribute which stores plotly JSON
     embedded: If true, the visualizer will expect a parent visualizer to call "selectedObjectChanged". If false, it will subscribe to WebGME events.
 }
