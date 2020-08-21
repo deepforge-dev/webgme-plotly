@@ -13,7 +13,7 @@ After import, `PlotlyGraph` will be available as a visualizer in your project. A
 
 ## Examples
 This repository is a functioning example of the `PlotlyGraph`. First, make sure you have an instance of mongo
- running locally. Then simply clone this repository and run it.
+ running locally. Then, simply clone this repository and run it.
 
 ```sh
 git clone https://github.com/deepforge-dev/webgme-plotly.git
