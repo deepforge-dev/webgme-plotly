@@ -16,6 +16,8 @@ define([
 ) {
     'use strict';
 
+    const DEFAULT_PLOTLY_DATA_ATTRIBUTE = 'data';
+
     function PlotlyGraphPanel(layoutManager, params) {
         let options = {};
         //set properties from options
@@ -27,8 +29,7 @@ define([
 
         this._client = params.client;
         this._embedded = params.embedded;
-        this._activeNodeMetaName = params.activeNodeMetaName;
-        this._plotlyDataAttribute = params.plotlyDataAttribute;
+        this._plotlyDataAttribute = params.plotlyDataAttribute || DEFAULT_PLOTLY_DATA_ATTRIBUTE;
 
         //initialize UI
         this._initialize();
@@ -57,7 +58,6 @@ define([
             client: this._client,
             embedded: this._embedded,
             widget: this.widget,
-            activeNodeMetaName: this._activeNodeMetaName,
             plotlyDataAttribute: this._plotlyDataAttribute
         });
 

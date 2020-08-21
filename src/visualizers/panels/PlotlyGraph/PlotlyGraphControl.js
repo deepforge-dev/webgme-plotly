@@ -7,9 +7,6 @@ define([
 ) {
     'use strict';
 
-    const GRAPH = 'Graph',
-        DATA = 'data';
-
     function PlotlyGraphControl(options) {
 
         this._logger = options.logger.fork('Control');
@@ -20,8 +17,7 @@ define([
         this._widget = options.widget;
 
         this._embedded = options.embedded;
-        this._activeNodeMetaName = options.activeNodeMetaName || GRAPH;
-        this._plotlyDataAttribute = options.plotlyDataAttribute || DATA;
+        this._plotlyDataAttribute = options.plotlyDataAttribute;
         this._currentNodeId = null;
         this._currentNodeParentId = undefined;
         this._logger.debug('ctor finished');
@@ -64,15 +60,7 @@ define([
     PlotlyGraphControl.prototype._getObjectDescriptor = function (nodeId) {
         let node = this._client.getNode(nodeId),
             desc;
-        const isGraph = node => {
-            if(node) {
-                const metaNode = this._client.getNode(node.getMetaTypeId());
-                return metaNode ?
-                    metaNode.getAttribute('name') === this._activeNodeMetaName :
-                    false;
-            }
-        };
-        if(isGraph(node)){
+        if(node){
             const plotlyData = node.getAttribute(this._plotlyDataAttribute);
             if(plotlyData){
                 desc = { plotlyData: JSON.parse(plotlyData) };
