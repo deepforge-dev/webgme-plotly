@@ -1,26 +1,32 @@
 # webgme-plotly
-This repository contains implementations for visualizing [plotly](https://plotly.com/javascript/) JSON in [webgme
+This repository contains components for visualizing [plotly](https://plotly.com/javascript/) JSON in [webgme
 ](https://github.com/webgme/webgme). 
-## Installation
-First, install `webgme-plotly` to your webgme project using `npm`:
-```sh
-$ npm install webgme-plotly
-```
-After installation use  [webgme-cli](https://github.com/webgme/webgme-cli) to import `PlotlyGraph` panel to your project:
+## Quick start
+Use [webgme-cli](https://github.com/webgme/webgme-cli) to import `PlotlyGraph` panel to your webgme app:
 
 ```sh
 $ webgme import viz PlotlyGraph webgme-plotly
 ``` 
 
-After import, `PlotlyGraph` will be available as a visualizer.
+After import, `PlotlyGraph` will be available as a visualizer in your project. An example can be found
+ in [deepforge](https://github.com/deepforge-dev/deepforge).
 
-### Usage
-Checkout the following [seed](./src/seeds/testProject.webgmex), load it as a project and select `PlotlyGraph` panel
- for the sampleGraph node as shown in the figure below
+## Examples
+This repository is a functioning example of the `PlotlyGraph`. First, make sure you have an instance of mongo
+ running locally. Then simply clone this repository and run it.
+
+```sh
+git clone https://github.com/deepforge-dev/webgme-plotly.git
+cd webgme-plotly
+npm install
+npm start
+```
+Then, navigate to `http://localhost:8888`, select the following [seed](./src/seeds/testProject.webgmex), load it as a
+ project and select `PlotlyGraph` panel for the sampleGraph node as shown in the figure below: 
  
 ![sample-image](./images/sample.png)
  
-### Customization
+## Customization
 To use it in your own visualizer to visualize plotly JSON from your project nodes, use the following customization
  panel parameters. 
 ```
