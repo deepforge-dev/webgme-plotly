@@ -1,15 +1,18 @@
 # webgme-plotly
+This repository contains implementations for visualizing [plotly](https://plotly.com/javascript/) JSON in [webgme
+](https://github.com/webgme/webgme). 
 ## Installation
-First, install the webgme-plotly following:
-- [NodeJS](https://nodejs.org/en/) (LTS recommended)
-- [MongoDB](https://www.mongodb.com/)
+First, install `webgme-plotly` to your webgme project using `npm`:
+```sh
+$ npm install webgme-plotly
+```
+After installation use  [webgme-cli](https://github.com/webgme/webgme-cli) to import `PlotlyGraph` panel to your project:
 
-Second, start mongodb locally by running the `mongod` executable in your mongodb installation (you may need to create a `data` directory or set `--dbpath`).
+```sh
+$ webgme import viz PlotlyGraph webgme-plotly
+``` 
 
-Then, run `webgme start` from the project root to start . Finally, navigate to `http://localhost:8888` to start using webgme-plotly-viz!
-
-## Plotly Visualizer For webgme
-This repository contains implementations for visualizing [plotly](https://plotly.com/javascript/) JSON in webgme. 
+After import, `PlotlyGraph` will be available as a visualizer.
 
 ### Usage
 Checkout the following [seed](./src/seeds/testProject.webgmex), load it as a project and select `PlotlyGraph` panel
